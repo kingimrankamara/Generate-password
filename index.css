@@ -1,0 +1,112 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif; /* Ensure font is applied globally */
+}
+
+.generate-pw-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 1em;
+    height: 100vh;
+    box-sizing: border-box; /* Ensure padding does not affect width */
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -0.05em;
+    text-align: left;
+    margin-bottom: 0;
+}
+
+.title .accent-txt {
+    color: #55F991;
+}
+
+.subtitle {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #6B7280;
+    margin-top: 0;
+}
+
+.generate-passwords-btn,
+.change-password-length {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px;
+    background: #10B981;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9px 17px;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 6px;
+    border: none; /* Remove default button border */
+    cursor: pointer; /* Indicate clickable area */
+}
+
+.generate-passwords-btn img {
+    height: 18px;
+    width: 14px;
+    margin-right: 0.5em; /* Adjust for better spacing */
+}
+
+.actions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1em; /* Space between actions and display container */
+}
+
+.display-passwords-container {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(2, auto);
+    grid-gap: 1em;
+    margin: 2em 0;
+    padding: 1.5em;
+}
+
+.pw-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #273549;
+    height: 2.5em;
+    width: 10em;
+    color: #5DEF92;
+    margin: 0;
+    padding: 0.4em 0.8em;
+    border-radius: 6px;
+    text-align: center;
+}
+
+.two, .four {
+    grid-column: span 2; /* Ensure elements span across the full width if needed */
+}
+
+.row {
+    grid-row: span 1; /* Ensures the element is in the right row */
+}
+
+@media (max-width: 450px) {
+    .display-passwords-container {
+        display: flex;
+        flex-direction: column;
+        margin-top: 1em;
+    }
+
+    .actions {
+        flex-direction: column;
+        margin: 1em 0;
+    }
+
+    .actions > button {
+        margin: 0.5em 0;
+        padding: 0.4em 0.8em;
+    }
+}
